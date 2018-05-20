@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "cbm:blocks/block_test",
+        "top": "cbm:blocks/block_test",
+        "side": "cbm:blocks/block_test"
+    }
+}

@@ -1,0 +1,7 @@
+{
+	"type": "CTM",
+	"textures": [
+		"blocks/block_test",
+		"./block_test"
+	]
+}
