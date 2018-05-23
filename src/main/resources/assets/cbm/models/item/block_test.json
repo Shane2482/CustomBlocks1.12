@@ -1,6 +1,3 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "cbm:blocks/block_test"
-	}
+    "parent": "cbm:block/block_test"
 }

@@ -85,10 +85,10 @@ public abstract class SlabBase extends BlockSlab {
     }
  
    
-  @Override
-  public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-       return Item.getItemFromBlock(BlockInit.slab_half_test);
-    }
+//  @Override
+//  public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+//       return Item.getItemFromBlock(BlockInit.slab_half_test);
+//    }
  
    
     @Override

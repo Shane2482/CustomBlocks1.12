@@ -1,6 +1,7 @@
 package shane.mod.objects.blocks;
 
 import java.util.List;
+
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
@@ -8,24 +9,19 @@ import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
 
 public class WallBase extends Block
 {
@@ -34,16 +30,25 @@ public class WallBase extends Block
     public static final PropertyBool EAST = PropertyBool.create("east");
     public static final PropertyBool SOUTH = PropertyBool.create("south");
     public static final PropertyBool WEST = PropertyBool.create("west");
-    public static final PropertyEnum<WallBase.WallType> VARIANT = PropertyEnum.<WallBase.WallType>create("variant", WallBase.WallType.class);
     protected static final AxisAlignedBB[] AABB_BY_INDEX = new AxisAlignedBB[] {new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 1.0D, 0.75D), new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 1.0D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.25D, 0.75D, 1.0D, 0.75D), new AxisAlignedBB(0.0D, 0.0D, 0.25D, 0.75D, 1.0D, 1.0D), new AxisAlignedBB(0.25D, 0.0D, 0.0D, 0.75D, 1.0D, 0.75D), new AxisAlignedBB(0.3125D, 0.0D, 0.0D, 0.6875D, 0.875D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.75D, 1.0D, 0.75D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.75D, 1.0D, 1.0D), new AxisAlignedBB(0.25D, 0.0D, 0.25D, 1.0D, 1.0D, 0.75D), new AxisAlignedBB(0.25D, 0.0D, 0.25D, 1.0D, 1.0D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.3125D, 1.0D, 0.875D, 0.6875D), new AxisAlignedBB(0.0D, 0.0D, 0.25D, 1.0D, 1.0D, 1.0D), new AxisAlignedBB(0.25D, 0.0D, 0.0D, 1.0D, 1.0D, 0.75D), new AxisAlignedBB(0.25D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.75D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D)};
     protected static final AxisAlignedBB[] CLIP_AABB_BY_INDEX = new AxisAlignedBB[] {AABB_BY_INDEX[0].setMaxY(1.5D), AABB_BY_INDEX[1].setMaxY(1.5D), AABB_BY_INDEX[2].setMaxY(1.5D), AABB_BY_INDEX[3].setMaxY(1.5D), AABB_BY_INDEX[4].setMaxY(1.5D), AABB_BY_INDEX[5].setMaxY(1.5D), AABB_BY_INDEX[6].setMaxY(1.5D), AABB_BY_INDEX[7].setMaxY(1.5D), AABB_BY_INDEX[8].setMaxY(1.5D), AABB_BY_INDEX[9].setMaxY(1.5D), AABB_BY_INDEX[10].setMaxY(1.5D), AABB_BY_INDEX[11].setMaxY(1.5D), AABB_BY_INDEX[12].setMaxY(1.5D), AABB_BY_INDEX[13].setMaxY(1.5D), AABB_BY_INDEX[14].setMaxY(1.5D), AABB_BY_INDEX[15].setMaxY(1.5D)};
+	
 
-    public WallBase(Material materiall)
+    public WallBase(String name, Material materiall)
     {
         super(materiall);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)).withProperty(VARIANT, WallBase.WallType.NORMAL));
-        
+        this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
+        setUnlocalizedName(name);
+		setRegistryName(name);
+    
+    
     }
+    
+    
+	
+    
+    
+    
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
@@ -95,13 +100,7 @@ public class WallBase extends Block
         return i;
     }
 
-    /**
-     * Gets the localized name of this block. Used for the statistics page.
-     */
-    public String getLocalizedName()
-    {
-        return I18n.translateToLocal(this.getUnlocalizedName() + "." + WallBase.WallType.NORMAL.getUnlocalizedName() + ".name");
-    }
+    
 
     public boolean isFullCube(IBlockState state)
     {
@@ -138,16 +137,7 @@ public class WallBase extends Block
         return Block.isExceptBlockForAttachWithPiston(p_194143_0_) || p_194143_0_ == Blocks.BARRIER || p_194143_0_ == Blocks.MELON_BLOCK || p_194143_0_ == Blocks.PUMPKIN || p_194143_0_ == Blocks.LIT_PUMPKIN;
     }
 
-    /**
-     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-     */
-    public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
-    {
-        for (WallBase.WallType blockwall$enumtype : WallBase.WallType.values())
-        {
-            items.add(new ItemStack(this, 1, blockwall$enumtype.getMetadata()));
-        }
-    }
+   
 
     /**
      * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It
@@ -155,7 +145,7 @@ public class WallBase extends Block
      */
     public int damageDropped(IBlockState state)
     {
-        return ((WallBase.WallType)state.getValue(VARIANT)).getMetadata();
+        return 0;
     }
 
     @SideOnly(Side.CLIENT)
@@ -169,7 +159,7 @@ public class WallBase extends Block
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, WallBase.WallType.byMetadata(meta));
+        return this.getDefaultState();
     }
 
     /**
@@ -177,7 +167,7 @@ public class WallBase extends Block
      */
     public int getMetaFromState(IBlockState state)
     {
-        return ((WallBase.WallType)state.getValue(VARIANT)).getMetadata();
+        return 0;
     }
 
     /**
@@ -196,7 +186,7 @@ public class WallBase extends Block
 
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, new IProperty[] {UP, NORTH, EAST, WEST, SOUTH, VARIANT});
+        return new BlockStateContainer(this, new IProperty[] {UP, NORTH, EAST, WEST, SOUTH});
     }
 
     /**
@@ -230,59 +220,5 @@ public class WallBase extends Block
 
     /* ======================================== FORGE END ======================================== */
 
-    public static enum WallType implements IStringSerializable
-    {
-        NORMAL(0, "cobblestone", "normal"),
-        MOSSY(1, "mossy_cobblestone", "mossy");
-
-        private static final WallBase.WallType[] META_LOOKUP = new WallBase.WallType[values().length];
-        private final int meta;
-        private final String name;
-        private final String unlocalizedName;
-
-        private WallType(int meta, String name, String unlocalizedName)
-        {
-            this.meta = meta;
-            this.name = name;
-            this.unlocalizedName = unlocalizedName;
-        }
-
-        public int getMetadata()
-        {
-            return this.meta;
-        }
-
-        public String toString()
-        {
-            return this.name;
-        }
-
-        public static WallBase.WallType byMetadata(int meta)
-        {
-            if (meta < 0 || meta >= META_LOOKUP.length)
-            {
-                meta = 0;
-            }
-
-            return META_LOOKUP[meta];
-        }
-
-        public String getName()
-        {
-            return this.name;
-        }
-
-        public String getUnlocalizedName()
-        {
-            return this.unlocalizedName;
-        }
-
-        static
-        {
-            for (WallBase.WallType blockwall$enumtype : values())
-            {
-                META_LOOKUP[blockwall$enumtype.getMetadata()] = blockwall$enumtype;
-            }
-        }
-    }
+   
 }

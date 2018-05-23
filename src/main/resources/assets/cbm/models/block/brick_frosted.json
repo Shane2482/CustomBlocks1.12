@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "cbm:blocks/block_test"
+		"all": "cbm:blocks/brick_frosted"
 	}
 }

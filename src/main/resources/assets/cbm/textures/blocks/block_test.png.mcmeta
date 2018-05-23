@@ -1,0 +1,11 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "edges",
+    "layer": "SOLID",
+    "textures": [
+    "cbm:blocks/block_testctm",
+            "cbm:blocks/block_test"
+            ]    
+  }
+}

@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import shane.mod.init.BlockInit;
 import shane.mod.init.ItemInit;
 import shane.mod.library.Reference;
-import shane.mod.proxy.CommonProxy;
+import shane.mod.proxy.ServerProxy;
 
 
 
@@ -22,7 +22,7 @@ public class CustomBlocks {
 public static CustomBlocks instance;
 
 @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.SERVER)
-public static CommonProxy proxy;
+public static ServerProxy proxy;
 
 
 @EventHandler

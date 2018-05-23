@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "cbm:blocks/brick_damaged/brick_damaged7"
+    }
+}

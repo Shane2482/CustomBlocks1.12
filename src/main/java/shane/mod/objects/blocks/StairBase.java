@@ -1,9 +1,11 @@
 package shane.mod.objects.blocks;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class StairBase extends BlockStairs 
@@ -20,6 +22,7 @@ public class StairBase extends BlockStairs
 		setCreativeTab(tab);
 		setSoundType(sound);
 		setLightLevel(value);
+	   
 
 		this.useNeighborBrightness = true;
 	}

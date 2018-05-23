@@ -47,8 +47,8 @@ public class GateBase extends BlockHorizontal
 	{
 		super(material, color);
 
-		this.setUnlocalizedName(name);
-		this.setRegistryName(name);
+		setUnlocalizedName(name);
+		setRegistryName(name);
 		setHardness(hardness);
 		setResistance(resistance);
 		setHarvestLevel(tool, level);

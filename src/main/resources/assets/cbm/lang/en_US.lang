@@ -3,6 +3,13 @@ item.dust_wood.name=Wood Dust
 tile.block_furnace_test.name=Furnace Test
 
 
+tile.future.red.name=Red
+
+tile.future.blue.name=Blue
+
+tile.future.black.name=Black
+
+
 
 
 

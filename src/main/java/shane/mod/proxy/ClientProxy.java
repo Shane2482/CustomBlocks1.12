@@ -1,14 +1,20 @@
 package shane.mod.proxy;
 
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.client.model.ModelLoader;
+import com.google.common.collect.ImmutableList;
 
-public class ClientProxy extends CommonProxy
-{
-	@Override
-	public void registerItemRenderer(Item item, int meta, String id)
-	{
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), id));
-	}
+import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.statemap.DefaultStateMapper;
+import net.minecraft.client.renderer.block.statemap.StateMapperBase;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import shane.mod.init.BlockInit;
+import shane.mod.init.ItemInit;
+
+public class ClientProxy extends ServerProxy
+{	
 }
