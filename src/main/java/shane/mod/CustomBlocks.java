@@ -7,8 +7,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import shane.mod.init.BlockCustModelsInit;
 import shane.mod.init.BlockInit;
-import shane.mod.init.ItemInit;
 import shane.mod.library.Reference;
 import shane.mod.proxy.ServerProxy;
 
@@ -28,7 +28,8 @@ public static ServerProxy proxy;
 @EventHandler
 public void preInit(FMLPreInitializationEvent event) {
 	BlockInit.init();
-	ItemInit.init();
+	BlockCustModelsInit.init();
+	
 }
 
 @EventHandler

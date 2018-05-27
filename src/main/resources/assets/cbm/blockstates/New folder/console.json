@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=north": { "model": "cbm:console"},
+        "facing=south": { "model": "cbm:console", "y": 180 },
+        "facing=west":  { "model": "cbm:console", "y": 270},
+        "facing=east":  { "model": "cbm:console", "y": 90}
+    }
+}
+

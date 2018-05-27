@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "cbm:blocks/metal/steel/new/steel_plating1"
+	}
+}

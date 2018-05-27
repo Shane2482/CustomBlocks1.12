@@ -2,8 +2,8 @@
     "forge_marker": 1,
     "defaults": {
         "transform": "forge:default-block",
-        "model": "minecraft:cube_all",
-        "textures": {"all": "cbm:blocks/metal/steel/new/steel1"}
+        "model": "cube_all",
+        "textures": {"all": "cbm:blocks/block_test"}
     },
     "variants": {
         "normal": [{}],

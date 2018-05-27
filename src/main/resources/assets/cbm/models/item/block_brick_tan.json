@@ -1,6 +1,0 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "cbm:blocks/brick_tan1"
-	}
-}

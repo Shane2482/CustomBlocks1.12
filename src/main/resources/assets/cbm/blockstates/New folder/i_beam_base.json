@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=down":  { "model": "cbm:i_beam_base"},
+        "facing=up":    { "model": "cbm:i_beam_base", "x": 180  },
+        "facing=north": { "model": "cbm:i_beam_base_side"},
+        "facing=south": { "model": "cbm:i_beam_base_side", "y": 180 },
+        "facing=west":  { "model": "cbm:i_beam_base_side", "y": 270 },
+        "facing=east":  { "model": "cbm:i_beam_base_side", "y": 90  }
+    }
+}
