@@ -28,7 +28,7 @@ public static ServerProxy proxy;
 @EventHandler
 public void preInit(FMLPreInitializationEvent event) {
 	BlockInit.init();
-	BlockCustModelsInit.init();
+	
 	
 }
 
