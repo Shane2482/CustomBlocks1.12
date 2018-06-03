@@ -1,0 +1,17 @@
+{
+    "multipart": [
+        {   "apply": { "model": "cbm:fence_test_post" }},
+        {   "when": { "north": "true" },
+            "apply": { "model": "cbm:fence_test_side", "uvlock": true }
+        },
+        {   "when": { "east": "true" },
+            "apply": { "model": "cbm:fence_test_side", "y": 90, "uvlock": true }
+        },
+        {   "when": { "south": "true" },
+            "apply": { "model": "cbm:fence_test_side", "y": 180, "uvlock": true }
+        },
+        {   "when": { "west": "true" },
+            "apply": { "model": "cbm:fence_test_side", "y": 270, "uvlock": true }
+        }
+    ]
+}

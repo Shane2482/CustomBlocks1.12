@@ -1,0 +1,24 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cube_all",
+     "textures": {"all": "cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged1"}
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": 
+      [      
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged1"}, "weight": 2},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged2"}, "weight": 2},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged3"}, "weight": 2},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged3"}, "weight": 2},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged4"}, "weight": 2},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged7"}, "weight": 1},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged8"}, "weight": 1},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged9"}, "weight": 1},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/aged/brick/yellow_brick_damaged10"}, "weight": 1}
+       ]
+     }
+}

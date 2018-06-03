@@ -1,0 +1,28 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+     "transform": "forge:default-block",
+     "model": "cbm:layered_blocks/block_layer",
+     "textures": 
+     {
+        "0": "cbm:blocks/bricks/red/new/layer/red_brick_layer",
+        "particle": "cbm:blocks/bricks/red/new/layer/red_brick_layer"
+     }
+       
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": [{}],
+ 
+        "facing=down":  { "model": "cbm:layered_blocks/block_layer_vertical"},
+        "facing=up":    { "model": "cbm:layered_blocks/block_layer_vertical", "x": 180},
+        "facing=north": { "model": "cbm:layered_blocks/block_layer"},
+        "facing=south": { "model": "cbm:layered_blocks/block_layer", "y": 180},
+        "facing=west":  { "model": "cbm:layered_blocks/block_layer", "y": 270},
+        "facing=east":  { "model": "cbm:layered_blocks/block_layer", "y": 90}
+
+     }
+}
+

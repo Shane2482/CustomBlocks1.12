@@ -1,0 +1,18 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {   
+   
+    "model": "cbm:trash/trash"
+     
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": {"model": "cbm:trash/trash"}
+
+       
+        
+    
+     }
+}

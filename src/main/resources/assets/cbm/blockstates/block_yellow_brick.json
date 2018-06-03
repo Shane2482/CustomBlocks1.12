@@ -1,0 +1,22 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cube_all",
+     "textures": {"all": "cbm:blocks/bricks/yellow/new/brick/yellow_brick1"}
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": 
+      [      
+         {"textures": {"all":"cbm:blocks/bricks/yellow/new/brick/yellow_brick1"}, "weight": 1},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/new/brick/yellow_brick2"}, "weight": 1},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/new/brick/yellow_brick3"}, "weight": 1},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/new/brick/yellow_brick4"}, "weight": 1},
+         {"textures": {"all":"cbm:blocks/bricks/yellow/new/brick/yellow_brick5"}, "weight": 1}
+         
+         
+       ]
+     }
+}

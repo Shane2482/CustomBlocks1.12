@@ -1,0 +1,17 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cube_all",
+     "textures": {"all": "cbm:blocks/metal/block_blue_metal_plating"}
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": 
+      [      
+         {"textures": {"all":"cbm:blocks/metal/block_blue_metal_plating"}, "weight": 1}
+         
+       ]
+     }
+}

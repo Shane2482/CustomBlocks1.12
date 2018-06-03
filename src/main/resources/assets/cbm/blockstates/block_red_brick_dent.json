@@ -1,0 +1,17 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cube_all",
+     "textures": {"all": "cbm:blocks/bricks/red/new/dent/red_brick_dent"}
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": 
+      [      
+         {"textures": {"all":"cbm:blocks/bricks/red/new/dent/red_brick_dent"}}
+        
+       ]
+     }
+}

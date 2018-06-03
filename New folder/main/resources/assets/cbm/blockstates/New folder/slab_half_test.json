@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "cbm:slab_half_test_bottom" },
+        "half=top": { "model": "cbm:slab_half_test_top" }
+    }
+}

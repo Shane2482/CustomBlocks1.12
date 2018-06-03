@@ -1,0 +1,105 @@
+package shane.mod.objects.blocks.blockscustom;
+
+import java.util.List;
+
+import javax.annotation.Nullable;
+
+import com.google.common.collect.Lists;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.BlockFaceShape;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import net.minecraftforge.event.world.GetCollisionBoxesEvent;
+import shane.mod.CustomBlocks;
+import shane.mod.init.BlocksInit;
+import shane.mod.library.IHasModel;
+import shane.mod.objects.items.ItemInit;
+
+public class BlockTrash extends Block implements IHasModel
+{
+	protected static final AxisAlignedBB BOUNDINGBOX = new AxisAlignedBB(0D, 0.001D, 0D, 1D, 0.002D, 1.0D);
+
+	
+	public BlockTrash(String name) 
+	{
+		super(Material.ROCK);		
+		setUnlocalizedName(name);
+		setRegistryName(name);
+		setCreativeTab(CreativeTabs.DECORATIONS);
+		setSoundType(SoundType.GROUND);
+		 this.setLightOpacity(0);
+	
+		BlocksInit.BLOCKS.add(this);
+		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+		
+	}
+
+	@Override
+	public void registerModels() {
+		CustomBlocks.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+		
+	}
+	
+	@Override
+	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+		return BOUNDINGBOX;
+	}
+
+	@Override
+	public BlockRenderLayer getBlockLayer() 
+	{
+		return BlockRenderLayer.CUTOUT;
+	}
+
+	@Override
+	public boolean isOpaqueCube(IBlockState state) 
+	{
+		return false;
+	}
+
+	@Override
+	public boolean isFullBlock(IBlockState state) {
+		return false;
+	}
+	
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+	
+	@Override
+	public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return BlockFaceShape.UNDEFINED;
+    }
+	
+	 
+	public boolean isTopSolid(IBlockState state)
+    {
+        return false;
+    }
+	
+	@Override
+	public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos) {
+		return true;
+	}
+	
+	
+	
+}
+
+

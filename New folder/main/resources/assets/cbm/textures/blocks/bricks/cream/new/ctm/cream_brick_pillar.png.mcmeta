@@ -1,0 +1,10 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "pillar",
+    "layer": "SOLID",
+    "textures": [
+    "cbm:blocks/bricks/cream/new/ctm/cream_brick_pillar_map"
+            ]    
+  }
+}

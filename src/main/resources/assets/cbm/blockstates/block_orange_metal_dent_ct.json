@@ -1,0 +1,18 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cube_all",
+     "textures": {"all": "cbm:blocks/metal/paint/orange/ctm/orange_dent_ct"}
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": 
+      [      
+         {"textures": {"all":"cbm:blocks/metal/paint/orange/ctm/orange_dent_ct"}}
+         
+       ]
+     }
+}
+

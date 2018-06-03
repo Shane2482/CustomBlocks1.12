@@ -7,8 +7,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import shane.mod.init.BlockCustModelsInit;
-import shane.mod.init.BlockInit;
 import shane.mod.library.Reference;
 import shane.mod.proxy.ServerProxy;
 
@@ -16,7 +14,8 @@ import shane.mod.proxy.ServerProxy;
 
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
-public class CustomBlocks {
+public class CustomBlocks 
+{
 
 @Instance
 public static CustomBlocks instance;
@@ -26,11 +25,7 @@ public static ServerProxy proxy;
 
 
 @EventHandler
-public void preInit(FMLPreInitializationEvent event) {
-	BlockInit.init();
-	
-	
-}
+public void preInit(FMLPreInitializationEvent event) {}
 
 @EventHandler
 public void Init(FMLInitializationEvent event) {}

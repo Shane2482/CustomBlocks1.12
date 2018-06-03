@@ -1,0 +1,17 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cube_all",
+     "textures": {"all": "cbm:blocks/bricks/red/new/ctm/red_brick_pillar"}
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": 
+      [      
+         {"textures": {"all":"cbm:blocks/bricks/red/new/ctm/red_brick_pillar"}}
+        
+       ]
+     }
+}

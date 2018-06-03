@@ -1,0 +1,32 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {       
+    "model": "cbm:light_good"
+    
+    
+     
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": [{}],
+
+        "facing=down_z,powered=false": { "model": "cbm:light_good", "x": 180, "y": 180 },
+        "facing=down_x,powered=false": { "model": "cbm:light_good", "x": 180, "y": 90 },
+        "facing=up_z,powered=false": { "model": "cbm:light_good" },
+        "facing=up_x,powered=false": { "model": "cbm:light_good", "y": 270 },
+        "facing=east,powered=false": { "model": "cbm:light_good", "x": 90, "y": 90 },
+        "facing=west,powered=false": { "model": "cbm:light_good", "x": 90, "y": 270 },
+        "facing=south,powered=false" : { "model": "cbm:light_good", "x": 90, "y": 180 },
+        "facing=north,powered=false" : { "model": "cbm:light_good", "x": 90 },
+        "facing=down_z,powered=true" : { "model": "cbm:light_good", "x": 180, "y": 180 },
+        "facing=down_x,powered=true" : { "model": "cbm:light_good", "x": 180, "y": 90 },
+        "facing=up_z,powered=true": { "model": "cbm:light_good" },
+        "facing=up_x,powered=true": { "model": "cbm:light_good", "y": 270 },
+        "facing=east,powered=true": { "model": "cbm:light_good", "x": 90, "y": 90 },
+        "facing=west,powered=true": { "model": "cbm:light_good", "x": 90, "y": 270 },
+        "facing=south,powered=true": { "model": "cbm:light_good", "x": 90, "y": 180 },
+        "facing=north,powered=true": { "model": "cbm:light_good", "x": 90 }
+     }
+}

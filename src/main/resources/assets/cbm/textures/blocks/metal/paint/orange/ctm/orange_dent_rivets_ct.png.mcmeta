@@ -1,0 +1,10 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "ctm",
+    "layer": "SOLID",
+    "textures": [
+    "cbm:blocks/metal/paint/orange/ctm/orange_dent_rivets_map"
+            ]    
+  }
+}

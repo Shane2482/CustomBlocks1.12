@@ -1,0 +1,25 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cbm:brick_corner",
+    "textures": {
+      "0": "cbm:blocks/bricks/brick_corner",
+      "1": "cbm:blocks/bricks/cream/new/brick/cream_brick",
+      "particle": "cbm:blocks/bricks/cream/new/brick/cream_brick"
+    }
+     
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": [{}],
+
+       
+        "facing=north": { "model": "cbm:brick_corner"},
+        "facing=south": { "model": "cbm:brick_corner", "y": 180 },
+        "facing=west":  { "model": "cbm:brick_corner", "y": 270},
+        "facing=east":  { "model": "cbm:brick_corner", "y": 90}
+    
+     }
+}

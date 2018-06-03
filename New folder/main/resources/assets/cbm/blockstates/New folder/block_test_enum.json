@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "type=texture0": { "model": "cbm:texture_test/test0" },
+        "type=texture1": { "model": "cbm:texture_test/test1" },
+        "type=texture2": { "model": "cbm:texture_test/test2" },
+        "type=texture3": { "model": "cbm:texture_test/test3" },
+        "type=texture4": { "model": "cbm:texture_test/test4" },
+        "type=texture5": { "model": "cbm:texture_test/test5" },
+        "type=texture6": { "model": "cbm:texture_test/test6" },
+        "type=texture7": { "model": "cbm:texture_test/test7" },
+        "type=texture8": { "model": "cbm:texture_test/test8" },
+        "type=texture9": { "model": "cbm:texture_test/test9" },
+        "type=texture10": { "model": "cbm:texture_test/test10" },
+        "type=texture11": { "model": "cbm:texture_test/test11" },
+        "type=texture12": { "model": "cbm:texture_test/test12" }
+    }
+}
+
+
+
+	

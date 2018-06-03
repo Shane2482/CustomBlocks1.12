@@ -1,0 +1,17 @@
+{    
+    "forge_marker": 1,
+  "defaults": 
+  {    
+    "model": "cube_all",
+     "textures": {"all": "cbm:blocks/metal/paint/orange/rivets/orange_dent_rivets"}
+  },
+     "variants": 
+     {       
+      "inventory": [{}],    
+      "normal": 
+      [      
+         {"textures": {"all":"cbm:blocks/metal/paint/orange/rivets/orange_dent_rivets"}}
+         
+       ]
+     }
+}
